@@ -16,6 +16,11 @@ __version__ = "0.2" # TODO; increment this frequently!
 # https://stackoverflow.com/questions/26265015/how-to-get-console-output-printed-using-kivy
 # https://developer.android.com/reference/android/util/Log.html
 
+# Tried the stuff, below and can't get the Builder to do right. Move to
+# complete code examples.
+# dalem@QnD:~/PycharmProjects$ git clone https://github.com/kivy/kivy.git andiKivyExamples
+
+
 # From: https://stackoverflow.com/questions/23055696/see-output-of-print-statements-on-android-using-kivy-kivy-launcher
 from kivy.core.window import Window
 from kivy.clock import Clock
