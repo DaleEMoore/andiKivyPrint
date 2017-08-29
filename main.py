@@ -21,6 +21,7 @@ from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy.factory import Factory
 from kivy.lang import Builder
+import time
 
 Builder.load_string('''
 <InfoBubble@Bubble>
@@ -41,8 +42,12 @@ Builder.load_string('''
         # on the height.
         text_size: root.width - dp(20), None
 ''')
-info_bubble = ""
+# TODO; nothing appears for this info_bubble - what's going on?
+info_bubble = Factory.InfoBubble()
+#info_bubble = ""
+# TODO; output something that Android can see.
 def bubbprint(message):
+    print(message) # Normal console display output.
     message = repr(message)
     #if not info_bubble:
     #    info_bubble = Factory.InfoBubble()
@@ -70,29 +75,32 @@ def bubbprint(message):
 info_bubble = Factory.InfoBubble()
 s1 = "Start andiKivyPrint version " + str(__version__)
 bubbprint(s1)
-s1 = """
-This will be lots and lots and lots of lines.
-lots
-    more lots
-        more and more lots
-            lots and lots and more lots
-lots
-    more lots
-        more and more lots
-            lots and lots and more lots
-lots
-    more lots
-        more and more lots
-            lots and lots and more lots
-lots
-    more lots
-        more and more lots
-            lots and lots and more lots
-lots
-    more lots
-        more and more lots
-            lots and lots and more lots
-"""
-bubbprint(s1)
+X = 5
+print("Sleeping " + str(X) + " seconds.")
+time.sleep(X)
+#s1 = """
+#This will be lots and lots and lots of lines.
+#lots
+#    more lots
+#        more and more lots
+#            lots and lots and more lots
+#lots
+#    more lots
+#        more and more lots
+#            lots and lots and more lots
+#lots
+#    more lots
+#        more and more lots
+#            lots and lots and more lots
+#lots
+#    more lots
+#        more and more lots
+#            lots and lots and more lots
+#lots
+#    more lots
+#        more and more lots
+#            lots and lots and more lots
+#"""
+#bubbprint(s1)
 s1 = "End andiKivyPrint version " + str(__version__)
 bubbprint(s1)
